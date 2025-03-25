@@ -388,6 +388,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  border-bottom: #cd2126 2px solid;
 }
 .second-section .section-team .second-section_section-team_about .fam-5w {
   width: 800px;
