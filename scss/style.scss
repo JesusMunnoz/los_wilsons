@@ -74,6 +74,12 @@ body {
         font-family: $font-title;
         text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
     }
+    h5{
+        font-size: 3rem;
+        color:  $color-foodBack-text;
+        justify-self: start;
+        font-family: $font-title;
+    }
         
     .container {
         width: 200px;
@@ -366,52 +372,77 @@ body {
             column-gap: 50px;
             row-gap: 80px;
             padding: 50px;
-        }
 
-        .product-card {
-            width: 300px;
-            height: 480px;
-            /*height: 45vh;*/
-            background-color: $secondary-color;
-            color: $primary-text-color;
-            padding: 20px;
-            border-radius: 8px;
-
-            .product-image{
-                width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 10px;/**/
-
-                img{
-                    width: 250px;
-                    height: 200px;
-                    object-fit: cover;
-                    border-radius: 6px;
+            .product-card {
+                width: 300px;
+                height: 480px;
+                /*height: 45vh;*/
+                background-color: $secondary-color;
+                color: $primary-text-color;
+                padding: 20px;
+                border-radius: 8px;
+    
+                .product-image{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;/**/
+    
+                    img{
+                        width: 250px;
+                        height: 200px;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+                }
+                h3{
+                    margin-top: 30px;
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+                h2{
+                    margin-top: 20px;
+                }
+                hr{
+                    height: 10px;
+                    background-color: $color-spotFace-ear-textShadow;
+                    border-bottom: 1px solid $color-body-legs;
+                    border-right: 1px solid $color-body-legs;
+                    box-shadow: 2px 2px 0 $color-foodBack-text;
+                    border-top: none;
+                    border-left: none;
+                }
+                p{
+                    margin-top: 10px;
+                    font-size: 1.5rem;
                 }
             }
-            h3{
-                margin-top: 30px;
-                text-align: center;
-                font-size: 1.5rem;
+        }
+
+        .second-section_section-team_about{
+            height: 750px;
+            color: $primary-text-color;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            gap: 30px;
+            @include flex-center(row, space-evenly, center);
+            
+
+            .fam-5w{
+                width: 800px;
+                p{  
+                    
+                    font-size: 2rem;
+                }
             }
-            h2{
-                margin-top: 20px;
-            }
-            hr{
-                height: 10px;
-                background-color: $color-spotFace-ear-textShadow;
-                border-bottom: 1px solid $color-body-legs;
-                border-right: 1px solid $color-body-legs;
-                box-shadow: 2px 2px 0 $color-foodBack-text;
-                border-top: none;
-                border-left: none;
-            }
-            p{
-                margin-top: 10px;
-                font-size: 1.5rem;
+
+            .fam-image img{
+                height: 580px;
+                border-radius: 20px;
             }
         }
 
