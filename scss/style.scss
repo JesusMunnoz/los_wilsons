@@ -1,0 +1,713 @@
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiry-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$quaternary-color: #FA9500;
+
+$background: #ffe97c;
+$color-body-legs: #ee9728;
+$color-body-neck-frotLegs-face-ear: #e97833;
+$color-foodBack-text: #e55627;
+$color-tail: #e77d21;
+$color-spotFace-ear-textShadow: #cd2126;
+$color-colarBackground: #5184bf;
+$color-colarBorder: #2e5296;
+$color-grass: #55bf51;
+$black: #000000;
+
+$font-title: "Lilita One", sans-serif;
+$font-stack: "IBM Plex Sans", sans-serif;
+$font-second: "Roboto Slab", serif;
+$font-third: "Roboto Mono", monospace;
+$paragraph-size: 1.5rem;
+
+/*---------------------------------------------*/
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+  
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;
+    }
+}
+
+/*---------------------------------------------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /*font-family: "IBM Plex Sans", sans-serif;*/
+    background-color: $background;
+}
+
+.nav-bar{
+    height: 150px;
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Divide el nav en dos columnas iguales */
+    grid-template-rows: 1fr;
+    padding: 20px 20px;
+    background-color: $background;
+    /*border: #e55627 1px solid;*/
+    align-items: center;
+    
+    h1{
+        font-size: 5rem;
+        color:  $color-foodBack-text;
+        justify-self: start;
+        font-family: $font-title;
+        text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+    }
+        
+    .container {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        
+        scale:0.5;
+        justify-self: end;
+
+        .dog {
+            width: 162.5px;
+            height: 62.5px;
+            background-color: $color-body-legs;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: calc(50% - 5px);
+            border-radius: 0 37.5px 0 62.5px;
+        }
+        .dog-bottom {
+            position: absolute;
+            width: 162.5px;
+            height: 72.5px;
+            background-color: $color-body-neck-frotLegs-face-ear;
+            transform: translate(-50%, -50%);
+            top: calc(50% + 12.5px);
+            left: calc(50% - 5px);
+            border-radius: 0 37.5px 0 62.5px;
+        }
+        
+        .leg-1, .leg-3 {
+            width: 25px;
+            height: 34.3px;
+            position: absolute;
+            border-radius: 0 0 0 9.3px;
+        }
+        .leg-1 {
+            /*Pierna delantera atrás*/
+            top: 123.5px;
+            left: 50px;
+            background-color: $color-foodBack-text;
+        }
+            
+        .leg-3 {
+            background-color: $color-body-legs;
+            top: 56.2px;
+            left: 50px;
+        }
+        .leg-1:before, .leg-1:after{
+            /*pie delantera atras*/
+            position: absolute;
+            content: "";
+            background-color: $color-foodBack-text;
+        }
+        .leg-3:before, .leg-3:after{
+            position: absolute;
+            content: "";
+            background-color: $color-body-legs;
+        }
+        .leg-1:before, .leg-3:before {
+            height: 3.7px;
+            width: 15px;
+            right: 0;
+            bottom: -3.1px;
+        }
+        .leg-1:after, .leg-3:after {
+            height: 12.5px;
+            width: 25px;
+            right: 0;
+            bottom: -15px;
+            border-radius: 12.5px 0 0 0;
+        }
+        .leg-2, .leg-4{
+            width: 37.5px;
+            height: 34.3px;
+            position: absolute;
+            border-radius: 0 0 0 21.8px;
+        }
+        .leg-2{
+            /*pierna trasera atras*/
+            background-color: $color-foodBack-text;
+            left: 125px;
+            top: 123.5px;
+        }
+        .leg-4{
+            background-color: $color-body-legs;
+            left: 125px;
+            top: 56.2px;
+        }
+        .leg-4:before, .leg-4:after{
+            background-color: $color-body-legs;
+            position: absolute;
+            content: "";
+        }
+        .leg-2:before, .leg-2:after{
+            /*pie delantera atras*/
+            background-color: $color-foodBack-text;
+            position: absolute;
+            content: "";
+        }
+        .leg-2:before, .leg-4:before{
+            height: 3.7px;
+            width: 15.6px;
+            right: 0;
+            bottom: -3.1px;
+        }
+        .leg-2:after, .leg-4:after{
+            height: 12.5px;
+            width: 37.5px;
+            right: 0;
+            bottom: -15px;
+            border-radius: 12.5px 0 0 0;
+        }
+        
+        .tail {
+            width: 12.5px;
+            height: 75px;
+            background-color: $color-tail;
+            position: absolute;
+            left: 163px;
+            top: 30px;
+            border-radius: 12.5px 0 0 0;
+        }  
+        .neck {
+            width: 62.5px;
+            height: 19px;
+            background-color: $color-body-legs;
+            position: absolute;
+            top: -18.7px;
+        }  
+        .neck:before {
+            position: absolute;
+            content: "";
+            width: 68.7px;
+            height: 6.2px;
+            background-color: $color-colarBackground;
+            border: 3.7px solid $color-colarBorder;
+            left: -6.2px;
+            top: 6.2px;
+        }  
+        .face {
+            background-color: $color-body-legs;
+            width: 100px;
+            height: 43.7px;
+            position: absolute;
+            left: -37.5px;
+            bottom: 78.1px;
+            border-radius: 0 0 0 43.7px;
+        }
+        .face:before {
+            position: absolute;
+            content: "";
+            width: 62.5px;
+            height: 31.2px;
+            background-color: $color-spotFace-ear-textShadow;
+            border-radius: 0 0 31.2px 31.2px;
+            right: 0;
+        } 
+        .face:after {
+            /*nose*/
+            position: absolute;
+            content: "";
+            height: 9.3px;
+            width: 18.7px;
+            background-color: $black;
+            border-radius: 0 0 9.3px 9.3px;
+            left: -4.3px;
+        } 
+        .ear, .ear:after {
+            position: absolute;
+            width: 15.6px;
+            height: 25px;
+            border-radius: 15.6px 0 0 0;
+        } 
+        .ear {
+            background-color: $color-body-legs;
+            bottom: 122px;
+            right: 112px;
+        } 
+        .ear:after {
+            content: "";
+            background-color: $color-spotFace-ear-textShadow;
+            right: -12px;
+        } 
+        .ear:before {
+            /*eye*/
+            position: absolute;
+            content: "";
+            height: 6.2px;
+            width: 6.2px;
+            background-color: $black;
+            border-radius: 50%;
+            top: 31.2px;
+            left: -12.5px;
+        }
+        .grass{
+            width: 200px;
+            height: 30px;
+            background-color: $color-grass;
+            position: absolute;
+            border-radius: 50px 50px 0 0;
+            bottom: 0;
+        }
+    }
+
+}
+
+.main-section{
+    justify-self: center;
+    width: 95vw;
+    border-top: $color-spotFace-ear-textShadow 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-article{
+    //border: 1px solid red;
+    height: 750px;
+    color: $primary-text-color;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 30px;
+    @include flex-center(row, space-evenly, center);
+    border-bottom: $color-spotFace-ear-textShadow 2px solid;
+    
+    .impact-section{
+        /*display: flex;
+        flex-direction: column;*/
+        //border: 1px solid black;
+        height: 400px;
+        @include flex-center(column, space-evenly, flex-start);
+        padding-top: 50px;
+        gap: 25px;
+    }
+
+    h2{
+        font-size: 3.5rem;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        text-align: center;
+        font-size: 3rem;
+    }
+    @include buttonStyle;
+    button{
+        width: 20vh;
+        padding: 20px;
+        background-color: $quaternary-color;
+        border-radius: 35px;
+        color: white;
+        font-size: 1.5rem;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    img{
+        height: 580px;
+        border-radius: 20px;
+    }
+}
+
+
+.second-section{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    
+    .section-team{
+        padding-bottom: 60px;
+        border-bottom: $color-spotFace-ear-textShadow 2px solid;
+        
+        .title{
+            font-size: 5rem;
+            color:  $color-foodBack-text;
+            font-family: $font-title;
+            text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+        }
+
+        .card-section {
+            @include flex-center(row, space-evenly, center);
+            width: 95vw;
+            height: auto;
+            flex-wrap: wrap;
+            column-gap: 50px;
+            row-gap: 80px;
+            padding: 50px;
+        }
+
+        .product-card {
+            width: 300px;
+            height: 480px;
+            /*height: 45vh;*/
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+
+            .product-image{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;/**/
+
+                img{
+                    width: 250px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+            h3{
+                margin-top: 30px;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            h2{
+                margin-top: 20px;
+            }
+            hr{
+                height: 10px;
+                background-color: $color-spotFace-ear-textShadow;
+                border-bottom: 1px solid $color-body-legs;
+                border-right: 1px solid $color-body-legs;
+                box-shadow: 2px 2px 0 $color-foodBack-text;
+                border-top: none;
+                border-left: none;
+            }
+            p{
+                margin-top: 10px;
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+    .section-offer{
+        padding-bottom: 60px;
+        border-bottom: $color-spotFace-ear-textShadow 2px solid;
+        margin-top: 40px;
+        
+        .title{
+            font-size: 5rem;
+            color:  $color-foodBack-text;
+            font-family: $font-title;
+            text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+        }
+
+        .card-section {
+            @include flex-center(row, space-evenly, center);
+            width: 95vw;
+            height: auto;
+            flex-wrap: wrap;
+            column-gap: 50px;
+            row-gap: 80px;
+            padding: 50px;/**/
+        }
+
+        .product-card {
+            width: 300px;
+            height: 480px;
+            /*height: 45vh;*/
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+
+            .product-image{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;/**/
+
+                img{
+                    width: 250px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+
+                video{
+                    width: 250px;
+                    height: 200px;
+                    object-fit: contain;
+                    border-radius: 6px;
+                }
+            }
+            h3{
+                margin-top: 30px;
+
+            }
+            h2{
+                margin-top: 20px;
+            }
+            hr{
+                height: 10px;
+                background-color: $color-spotFace-ear-textShadow;
+                border-bottom: 1px solid $color-body-legs;
+                border-right: 1px solid $color-body-legs;
+                box-shadow: 2px 2px 0 $color-foodBack-text;
+                border-top: none;
+                border-left: none;
+            }
+            p{
+                margin-top: 10px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .section-offer-important{
+            width: 90%;
+            height: auto;
+            margin-left: 30px;
+            color: #cd2126;
+            h3{
+                font-size: 2rem;
+                color: #cd2126;
+                margin-top: 20px;
+            }
+            p{
+                margin-top: 20px;
+                font-size: 1.5rem;
+
+            }
+        }
+
+    }
+}
+
+.third-section{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: $color-spotFace-ear-textShadow 2px solid;
+    
+
+    .title{
+        font-size: 5rem;
+        color:  $color-foodBack-text;
+        font-family: $font-title;
+        text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+
+        .info-p{
+            color: #cd2126;
+            font-size: 2rem;
+        }
+
+        .info-map{
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #e55627;
+
+    .brand-footer{
+        width: 30%;
+
+        font-size: 5rem;
+        color:  $background;
+        justify-self: start;
+        font-family: $font-title;
+        text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+    }
+
+    .icons-footer{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        svg{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+
+/*-------------------------------------------*/
+
+@media  (max-width:800px){
+    body{
+        .nav-bar{
+            width: 100%;
+            height: 150px;
+            
+            .container{
+                right: -20px;
+            }
+        }
+
+        .main-section{
+            .first-article{
+                height: 550px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 50px 20px;
+                
+                .impact-section{
+                    text-align: start;
+
+                    p{
+                        text-align: start;
+                    }
+                }
+                .image-section img{
+                    display: none;
+                    
+                }
+            }
+
+            .second-section{
+                width: 100%;
+                height: auto;
+                margin-top: 40px;
+
+                .section-team{
+                    padding-bottom: 40px;
+                    border-bottom: $color-spotFace-ear-textShadow 2px solid;
+                    
+                    .card-section {
+                        @include flex-center(column space-evenly, center);
+                        width: 95vw;
+                    }            
+                }
+
+                .section-offer{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 40px;
+                    
+                    .card-section {
+                        @include flex-center(column space-evenly, center);
+                        width: 95vw;
+                    }            
+                }
+            }
+
+            .third-section{
+                margin-top: 40px;
+                padding-bottom: 40px;
+                border-bottom: $color-spotFace-ear-textShadow 2px solid;
+                
+            
+                .title{
+                    font-size: 5rem;
+                    color:  $color-foodBack-text;
+                    font-family: $font-title;
+                    text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+                }
+            
+                .info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 40px;
+                    margin-top: 40px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+            
+                    .info-p{
+                        color: #cd2126;
+                        font-size: 2rem;
+                    }
+            
+                    .info-map{
+                        width: 45vw;
+
+                        img{
+                            width: 45vw;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        footer{
+            .brand-footer{
+                width: 45%;
+                font-size: 2rem;
+            }
+            .icons-footer{
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media  (min-width:801px){
+    body{
+        
+
+        footer{
+            .brand-footer{
+                width: 45%;
+                font-size: 4rem;
+            }
+            .icons-footer{
+                width: 45%;
+            }
+        }
+    }
+}
+
