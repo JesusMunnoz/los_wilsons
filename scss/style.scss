@@ -352,12 +352,50 @@ body {
     width: 100%;
     height: auto;
     margin-top: 40px;
+
+    .section-fam{
+        .title-fam{
+            font-size: 5rem;
+            color:  $color-foodBack-text;
+            font-family: $font-title;
+            text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+        }
+
+        .second-section_section-fam_about{
+            height: 750px;
+            color: $primary-text-color;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            gap: 30px;
+            @include flex-center(row, space-evenly, center);
+            border-bottom: $color-spotFace-ear-textShadow 2px solid;
+            
+            .fam-5w{
+                width: 800px;
+                p{  
+                    
+                    font-size: 2rem;
+                }
+            }
+
+            .fam-image img{
+                height: 580px;
+                border-radius: 20px;
+            }
+        }
+    }
     
     .section-team{
         padding-bottom: 60px;
         border-bottom: $color-spotFace-ear-textShadow 2px solid;
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
         
-        .title{
+        
+        .title-team{
             font-size: 5rem;
             color:  $color-foodBack-text;
             font-family: $font-title;
@@ -421,30 +459,7 @@ body {
             }
         }
 
-        .second-section_section-team_about{
-            height: 750px;
-            color: $primary-text-color;
-            padding-left: 45px;
-            padding-right: 45px;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            gap: 30px;
-            @include flex-center(row, space-evenly, center);
-            border-bottom: $color-spotFace-ear-textShadow 2px solid;
-            
-            .fam-5w{
-                width: 800px;
-                p{  
-                    
-                    font-size: 2rem;
-                }
-            }
-
-            .fam-image img{
-                height: 580px;
-                border-radius: 20px;
-            }
-        }
+    
 
     }
 
