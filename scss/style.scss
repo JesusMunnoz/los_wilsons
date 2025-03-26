@@ -354,6 +354,8 @@ body {
     margin-top: 40px;
 
     .section-fam{
+        border-bottom: $color-spotFace-ear-textShadow 2px solid;
+
         .title-fam{
             font-size: 5rem;
             color:  $color-foodBack-text;
@@ -370,7 +372,7 @@ body {
             padding-bottom: 100px;
             gap: 30px;
             @include flex-center(row, space-evenly, center);
-            border-bottom: $color-spotFace-ear-textShadow 2px solid;
+            
             
             .fam-5w{
                 width: 800px;
@@ -394,10 +396,10 @@ body {
     
     .section-team{
         padding-bottom: 60px;
-        border-bottom: $color-spotFace-ear-textShadow 2px solid;
         width: 100%;
         height: auto;
         margin-top: 40px;
+        border-bottom: $color-spotFace-ear-textShadow 2px solid;
         
         
         .title-team{
@@ -463,15 +465,12 @@ body {
                 }
             }
         }
-
-    
-
     }
 
     .section-offer{
         padding-bottom: 60px;
-        border-bottom: $color-spotFace-ear-textShadow 2px solid;
         margin-top: 40px;
+        border-bottom: $color-spotFace-ear-textShadow 2px solid;
         
         .title{
             font-size: 5rem;
@@ -702,6 +701,24 @@ footer{
 
 /*-------------------------------------------*/
 
+@media  (min-width:1000px){
+    .section-fam{
+        height: 900px;
+        
+    }
+}
+@media  (max-width:999px){
+    .section-fam{
+        height: auto;
+        .second-section_section-fam_about{
+            .fam-image{
+                display: none;
+            }
+        }
+        
+    }
+}
+
 @media  (max-width:800px){
     body{
         .nav-bar{
@@ -738,6 +755,16 @@ footer{
                 width: 100%;
                 height: auto;
                 margin-top: 40px;
+
+                .section-fam{
+                    height: auto;
+                    .second-section_section-fam_about{
+                        .fam-image{
+                            display: none;
+                        }
+                    }
+                    
+                }
 
                 .section-team{
                     padding-bottom: 40px;
