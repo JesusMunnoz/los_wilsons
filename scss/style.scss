@@ -58,7 +58,6 @@ body {
 
 .nav-bar{
     height: 150px;
-    font-size: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;  /* Divide el nav en dos columnas iguales */
     grid-template-rows: 1fr;
@@ -354,6 +353,7 @@ body {
     margin-top: 40px;
 
     .section-fam{
+        height: auto;
         border-bottom: $color-spotFace-ear-textShadow 2px solid;
 
         .title-fam{
@@ -364,7 +364,7 @@ body {
         }
 
         .second-section_section-fam_about{
-            height: 750px;
+            height: auto;
             color: $primary-text-color;
             padding-left: 45px;
             padding-right: 45px;
@@ -597,6 +597,7 @@ body {
 }
 
 .fourth-section{
+    height: auto;
     margin-top: 40px;
     padding-bottom: 40px;
     border-bottom: $color-spotFace-ear-textShadow 2px solid;
@@ -722,11 +723,24 @@ footer{
 @media  (max-width:800px){
     body{
         .nav-bar{
+            display: grid;
+            grid-template-columns: 1fr;  /* Divide el nav en dos columnas iguales */
+            grid-template-rows: 1fr;
             width: 100%;
-            height: 150px;
+            height: 200px;
+            h1{
+                font-size: 3.2rem;
+            }
+            h5{
+                font-size: 2.5rem;
+            }
             
             .container{
-                right: -20px;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                scale:0.2;
+                right: 0;
             }
         }
 
@@ -759,8 +773,16 @@ footer{
                 .section-fam{
                     height: auto;
                     .second-section_section-fam_about{
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 80px;
+                        padding-bottom: 80px;
                         .fam-image{
                             display: none;
+                        }
+
+                        .fam-5w{
+                            height: auto;
                         }
                     }
                     
@@ -789,11 +811,11 @@ footer{
             }
 
             .third-section{
+                height: auto;
                 margin-top: 40px;
                 padding-bottom: 40px;
                 border-bottom: $color-spotFace-ear-textShadow 2px solid;
-                
-            
+
                 .title{
                     font-size: 5rem;
                     color:  $color-foodBack-text;
@@ -803,7 +825,7 @@ footer{
             
                 .info{
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     gap: 40px;
@@ -817,17 +839,23 @@ footer{
                     }
             
                     .info-map{
-                        width: 45vw;
+                        align-self: center;
 
                         img{
-                            width: 45vw;
+                            width: 70vw;
                             border-radius: 10px;
                         }
                     }
                 }
             }
 
-            
+            .fourth-section{
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+            } 
         }
 
         footer{
@@ -844,8 +872,6 @@ footer{
 
 @media  (min-width:801px){
     body{
-        
-
         footer{
             .brand-footer{
                 width: 45%;

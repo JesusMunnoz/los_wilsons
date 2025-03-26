@@ -21,7 +21,6 @@ body {
 
 .nav-bar {
   height: 150px;
-  font-size: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Divide el nav en dos columnas iguales */
   grid-template-rows: 1fr;
@@ -311,6 +310,7 @@ body {
   margin-top: 40px;
 }
 .second-section .section-fam {
+  height: auto;
   border-bottom: #cd2126 2px solid;
 }
 .second-section .section-fam .title-fam {
@@ -320,7 +320,7 @@ body {
   text-shadow: 2px 2px 0px #cd2126;
 }
 .second-section .section-fam .second-section_section-fam_about {
-  height: 750px;
+  height: auto;
   color: #7C6A0A;
   padding-left: 45px;
   padding-right: 45px;
@@ -530,6 +530,7 @@ body {
 }
 
 .fourth-section {
+  height: auto;
   margin-top: 40px;
   padding-bottom: 40px;
   border-bottom: #cd2126 2px solid;
@@ -623,11 +624,24 @@ footer .icons-footer svg {
 }
 @media (max-width: 800px) {
   body .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr; /* Divide el nav en dos columnas iguales */
+    grid-template-rows: 1fr;
     width: 100%;
-    height: 150px;
+    height: 200px;
+  }
+  body .nav-bar h1 {
+    font-size: 3.2rem;
+  }
+  body .nav-bar h5 {
+    font-size: 2.5rem;
   }
   body .nav-bar .container {
-    right: -20px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    scale: 0.2;
+    right: 0;
   }
   body .main-section .first-article {
     height: 550px;
@@ -653,8 +667,17 @@ footer .icons-footer svg {
   body .main-section .second-section .section-fam {
     height: auto;
   }
+  body .main-section .second-section .section-fam .second-section_section-fam_about {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   body .main-section .second-section .section-fam .second-section_section-fam_about .fam-image {
     display: none;
+  }
+  body .main-section .second-section .section-fam .second-section_section-fam_about .fam-5w {
+    height: auto;
   }
   body .main-section .second-section .section-team {
     padding-bottom: 40px;
@@ -680,6 +703,7 @@ footer .icons-footer svg {
     width: 95vw;
   }
   body .main-section .third-section {
+    height: auto;
     margin-top: 40px;
     padding-bottom: 40px;
     border-bottom: #cd2126 2px solid;
@@ -692,7 +716,7 @@ footer .icons-footer svg {
   }
   body .main-section .third-section .info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -705,11 +729,15 @@ footer .icons-footer svg {
     font-size: 2rem;
   }
   body .main-section .third-section .info .info-map {
-    width: 45vw;
+    align-self: center;
   }
   body .main-section .third-section .info .info-map img {
-    width: 45vw;
+    width: 70vw;
     border-radius: 10px;
+  }
+  body .main-section .fourth-section .info {
+    display: flex;
+    flex-direction: column;
   }
   body footer .brand-footer {
     width: 45%;
