@@ -336,6 +336,10 @@ body {
 .second-section .section-fam .second-section_section-fam_about .fam-5w p {
   font-size: 2rem;
 }
+.second-section .section-fam .second-section_section-fam_about .fam-5w .final-mesage {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
 .second-section .section-fam .second-section_section-fam_about .fam-image img {
   height: 580px;
   border-radius: 20px;
@@ -432,7 +436,7 @@ body {
   row-gap: 80px;
   padding: 50px; /**/
 }
-.second-section .section-offer .product-card {
+.second-section .section-offer .card-section .product-card {
   width: 300px;
   height: 480px;
   /*height: 45vh;*/
@@ -441,7 +445,7 @@ body {
   padding: 20px;
   border-radius: 8px;
 }
-.second-section .section-offer .product-card .product-image {
+.second-section .section-offer .card-section .product-card .product-image {
   width: 100%;
   height: auto;
   display: flex;
@@ -449,25 +453,25 @@ body {
   align-items: center;
   margin-bottom: 10px; /**/
 }
-.second-section .section-offer .product-card .product-image img {
+.second-section .section-offer .card-section .product-card .product-image img {
   width: 250px;
   height: 200px;
   object-fit: cover;
   border-radius: 6px;
 }
-.second-section .section-offer .product-card .product-image video {
+.second-section .section-offer .card-section .product-card .product-image video {
   width: 250px;
   height: 200px;
   object-fit: contain;
   border-radius: 6px;
 }
-.second-section .section-offer .product-card h3 {
+.second-section .section-offer .card-section .product-card h3 {
   margin-top: 30px;
 }
-.second-section .section-offer .product-card h2 {
+.second-section .section-offer .card-section .product-card h2 {
   margin-top: 20px;
 }
-.second-section .section-offer .product-card hr {
+.second-section .section-offer .card-section .product-card hr {
   height: 10px;
   background-color: #cd2126;
   border-bottom: 1px solid #ee9728;
@@ -476,7 +480,7 @@ body {
   border-top: none;
   border-left: none;
 }
-.second-section .section-offer .product-card p {
+.second-section .section-offer .card-section .product-card p {
   margin-top: 10px;
   font-size: 1.5rem;
 }
@@ -521,6 +525,56 @@ body {
 }
 .third-section .info .info-map img {
   border-radius: 10px;
+}
+
+.fourth-section {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: #cd2126 2px solid;
+}
+.fourth-section .title {
+  font-size: 5rem;
+  color: #e55627;
+  font-family: "Lilita One", sans-serif;
+  text-shadow: 2px 2px 0px #cd2126;
+}
+.fourth-section .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+.fourth-section .info .info-walker img {
+  width: 250px;
+  border-radius: 10px;
+}
+.fourth-section .info .info-prices {
+  color: #cd2126;
+  font-size: 2rem;
+}
+.fourth-section .info .info-prices table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #cd2126;
+}
+.fourth-section .info .info-prices table thead {
+  background-color: rgba(233, 121, 51, 0.5490196078);
+}
+.fourth-section .info .info-prices table thead th {
+  padding: 20px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fourth-section .info .info-prices table tbody tr:hover {
+  background: #e55627;
+  color: #ffe97c;
+}
+.fourth-section .info .info-prices table tbody td {
+  padding: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #cd2126;
 }
 
 footer {
