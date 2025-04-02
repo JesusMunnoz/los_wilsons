@@ -694,7 +694,7 @@ body {
 
 footer{
     width: 100%;
-    height: 100px;
+    height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -703,12 +703,15 @@ footer{
 
     .brand-footer{
         width: 30%;
-
         font-size: 5rem;
         color:  $background;
         justify-self: start;
         font-family: $font-title;
         text-shadow: 2px 2px 0px $color-spotFace-ear-textShadow;
+
+        p{
+            font-size: 2rem;
+        }
     }
 
     .icons-footer{
