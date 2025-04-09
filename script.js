@@ -87,10 +87,10 @@ link.forEach(el=>{
         tmp5.textContent = data[attr].tmpFive
         tmp6.textContent = data[attr].tmpSix
 
-        offer1 = data[attr].offerOne
-        offer2 = data[attr].offerTwo
-        offer3 = data[attr].offerThree
-        offer4 = data[attr].offerFour
+        offer1.textContent = data[attr].offerOne
+        offer2.textContent = data[attr].offerTwo
+        offer3.textContent = data[attr].offerThree
+        offer4.textContent = data[attr].offerFour
 
         offerP1.innerHTML = data[attr].offerPOne
         offerP2.innerHTML = data[attr].offerPTwo
