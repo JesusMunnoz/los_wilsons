@@ -1011,4 +1011,7 @@ footer .icons-footer svg {
   body .nav-bar .container {
     display: none;
   }
+  body .main-section .langs p {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

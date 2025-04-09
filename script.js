@@ -1,6 +1,6 @@
 let langs = document.querySelector(".langs");
 let link = document.querySelectorAll("a");
-let title1 = document.querySelector(".titleOne");
+
 let title2 = document.querySelector(".titleTwo");
 let title3 = document.querySelector(".titleThree");
 let title4 = document.querySelector(".titleFour");
@@ -58,7 +58,6 @@ link.forEach(el=>{
         
         let attr = el.getAttribute("language")
 
-        title1.textContent = data[attr].titleOne
         title2.textContent = data[attr].titleTwo
         title3.textContent = data[attr].titleThree
         title4.textContent = data[attr].titleFour
@@ -112,7 +111,7 @@ link.forEach(el=>{
 
 let data = {
     spanish: {
-        titleOne: "Los Wilson's  ®",
+        
         titleTwo: "Paseadores caninos",
 
         titleThree: "Mientras tú trabajas, él se lo pasa de lujo.",
@@ -209,7 +208,6 @@ let data = {
         
     },
     galician: {
-        titleOne: "Os Wilsons  ®" ,
         titleTwo: "Paseadores de cans",
 
         titleThree: "Mentres ti traballas, el pásao en grande.",
@@ -309,7 +307,6 @@ let data = {
     },
 
     english: {
-        titleOne: "The Wilsons  ®",
         titleTwo: 'Dog walkers',
 
         titleThree: "While you're working, they're having a blast.",
