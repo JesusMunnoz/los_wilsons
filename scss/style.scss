@@ -301,6 +301,50 @@ body {
     display: flex;
     flex-direction: column;
 
+    .langs{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: end;
+        padding: 10px 20px;
+    
+        a{
+            height: 40px;
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #cd2126;
+            
+            border-radius: 5px;
+            font-size: 1.5rem;
+
+            img{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: 1px solid rgb(170, 170, 170);
+            }
+        }
+        
+    }
+    .langs{
+        a:hover{
+            color: #ee9728;
+            border-bottom:  3px solid #ee9728;
+        }
+    }
+    .langs{
+        
+        a.active{
+            color: #cd2126;
+            border-bottom: #cd2126 3px solid;
+       }
+    }
+
     .first-article{
         //border: 1px solid red;
         height: 750px;

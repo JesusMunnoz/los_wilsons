@@ -248,6 +248,40 @@ body {
   display: flex;
   flex-direction: column;
 }
+.main-section .langs {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: end;
+  padding: 10px 20px;
+}
+.main-section .langs a {
+  height: 40px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #cd2126;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.main-section .langs a img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(170, 170, 170);
+}
+.main-section .langs a:hover {
+  color: #ee9728;
+  border-bottom: 3px solid #ee9728;
+}
+.main-section .langs a.active {
+  color: #cd2126;
+  border-bottom: #cd2126 3px solid;
+}
 .main-section .first-article {
   height: 750px;
   color: #7C6A0A;
