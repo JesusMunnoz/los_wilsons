@@ -171,7 +171,7 @@ let data = {
 
 
         titleSeven: "Donde encontrarnos",
-        where: "Zona: Jardines de El Buen Retiro",
+        where: "Zona: Vigo, capital del Mundo",
 
         titleEight: "Tarifas",
         notaImportantes:`
@@ -270,7 +270,7 @@ let data = {
 
 
         titleSeven: "Onde atoparnos",
-        where: "Zona: Jardines de El Buen Retiro",
+        where: "Zona: Vigo, capital do mundo",
 
         titleEight: "Tarifas",
         notaImportantes: `
@@ -362,7 +362,7 @@ let data = {
 
 
         titleSeven: "Where to find us",
-        where: "Area: Jardines de El Buen Retiro",
+        where: "Area: Vigo, capital of the world",
 
         titleEight: "Rates",
         notaImportantes: `
